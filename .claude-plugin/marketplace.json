@@ -1,0 +1,34 @@
+{
+  "name": "hotmic-marketplace",
+  "owner": {
+    "name": "xiaohongsimon",
+    "url": "https://github.com/xiaohongsimon"
+  },
+  "plugins": [
+    {
+      "name": "hotmic",
+      "source": "./",
+      "description": "Push-to-talk voice dictation for macOS. Hold hotkey, speak, text auto-pastes into any app.",
+      "version": "1.0.0",
+      "author": {
+        "name": "xiaohongsimon",
+        "url": "https://github.com/xiaohongsimon"
+      },
+      "homepage": "https://github.com/xiaohongsimon/hotmic",
+      "repository": "https://github.com/xiaohongsimon/hotmic",
+      "license": "MIT",
+      "keywords": [
+        "speech-to-text",
+        "stt",
+        "voice",
+        "dictation",
+        "qwen3-asr",
+        "whisper",
+        "macos",
+        "metal",
+        "mlx",
+        "push-to-talk"
+      ]
+    }
+  ]
+}
