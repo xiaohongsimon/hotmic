@@ -1,9 +1,27 @@
 # HotMic
 
-[![CI](https://github.com/xiaohongsimon/hotmic/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaohongsimon/hotmic/actions)
+[![Status: Archived](https://img.shields.io/badge/status-archived-lightgrey.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS%20(Apple%20Silicon)-blue.svg)]()
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-green.svg)](https://python.org)
+
+> ## 📦 项目归档说明（不再更新）
+>
+> 在持续打磨过程中逐渐意识到一个现实：**产品级语音输入**是一场需要海量真实场景语料标注、长周期模型加训、以及大量工程细节打磨的重活。个人开发者仅凭开源 ASR 模型（哪怕是 Qwen3-ASR 这样顶级的开源模型）加规则化后处理，在识别稳定性、标点节奏、短语切分、口音与场景适配等细节上，与有专门数据管线和标注团队的闭源产品（如智谱 [AutoGLM 语音输入法](https://chatglm.cn/) 等）仍存在难以逾越的差距 —— 这部分差距并非算法层能补齐。
+>
+> 因此，日常使用已经切换到 AutoGLM 输入法；有类似需求的朋友推荐直接使用它。
+>
+> **但这段折腾本身的收获并不小**，尤其是在 agentic coding（AI 协同开发）这个语境下：
+>
+> - 和 AI 反复打磨过 supervisor 架构、UDS vs TCP、`flock` 单实例锁、macOS 主线程 / NSPanel 约束、PortAudio 状态机怪癖等工程细节 —— 这些都是独立开发时容易绕过、但要面向真实用户就绕不开的坑
+> - 全程 spec-first + feature branch 的协作流程，让 AI 从"写代码片段"升级到"独立推进整条 feature"
+> - 最终的架构形态（menubar supervisor + 原生 NSPanel 浮窗 + 单实例锁）保留在 `feat/native-overlay`、`feat/single-instance-lock` 分支，供参考
+>
+> 作为一份 **agentic coding 的真实踩坑记录** 归档在此。代码以 MIT 许可开源，欢迎 fork；主仓库不再发版、不再接受 PR，issue 也不再响应。
+>
+> 下文保留原有设计文档与使用说明，仅供存档与参考。
+
+---
 
 macOS 本地语音输入工具。按住热键说话，松开自动粘贴到任意窗口。
 
